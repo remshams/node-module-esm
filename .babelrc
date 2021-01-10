@@ -1,0 +1,4 @@
+{
+  "presets": ["env", "@babel/typescript"],
+  "ignore": "src/**/*.spec.ts"
+}

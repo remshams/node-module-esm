@@ -1,0 +1,29 @@
+{
+  "name": "node-module-esm",
+  "version": "1.0.0",
+  "description": "Example repository for rollup based, esm enabled node modules",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remshams/node-module-esm.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Mathias Remshardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/remshams/node-module-esm/issues"
+  },
+  "homepage": "https://github.com/remshams/node-module-esm#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  }
+}
