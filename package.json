@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Example repository for rollup based, esm enabled node modules",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "BABEL_ENV=production babel src --extensions '.ts' --out-dir 'lib'",
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remshams/node-module-esm.git"
@@ -21,6 +24,7 @@
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
