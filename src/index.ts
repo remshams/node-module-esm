@@ -1,3 +1,3 @@
-const log = (text: string) => console.log(text);
+import { echo } from './echo/echo';
 
-console.log(log('running'));
+console.log(echo('running'));

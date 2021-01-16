@@ -1,13 +1,19 @@
-const presets = ["@babel/env", "@babel/typescript"];
+const sharedPresets = ['@babel/typescript'];
 
 module.exports = {
-  "env": {
-    "production": {
-      "presets": presets,
-      "ignore": ["src/**/*.spec.ts"]
+  env: {
+    es: {
+      presets: [['@babel/env', {
+        modules: false
+      }], ...sharedPresets],
+      ignore: ['src/**/*.spec.ts']
     },
-    "test": {
-      "presets": presets    
+    cjs: {
+      presets: ['@babel/env', ...sharedPresets],
+      ignore: ['src/**/*.spec.ts']
+    },
+    test: {
+      presets: ['@babel/env', ...sharedPresets]    
     },
   }
 }
