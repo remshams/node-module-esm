@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ES5",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "outDir": "lib/cjs"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": ["./src/**/*.spec.ts"]
+}

@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "ES5",
-    "module": "commonjs",
+    "target": "es6",
+    "module": "es6",
     "esModuleInterop": true,
-    "allowJs": true,
     "emitDeclarationOnly": true,
     "strict": true,
     "noImplicitAny": true,
-    "outDir": "lib/cjs"
+    "moduleResolution": "node",
+    "outDir": "lib/es"
   },
   "include": [
     "./src/**/*.ts"
