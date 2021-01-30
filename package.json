@@ -4,11 +4,18 @@
   "description": "Example repository for rollup based, esm enabled node modules",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "exports": {
+    "require": "./lib/cjs/index.js",
+    "import": "./lib/es/index.js"
+  },
   "scripts": {
     "clean": "rimraf lib",
-    "declarations:es": "tsc --build tsconfig.es.json",
-    "declarations:cjs": "tsc --build tsconfig.cjs.json",
-    "declarations": "npm-run-all -lp declarations:es declarations:cjs",
+    "declarations": "tsc -p tsconfig.json",
     "build:es": "cross-env BABEL_ENV=es babel src --extensions '.ts' --out-dir 'lib/es'",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.ts' --out-dir 'lib/cjs'",
     "build": "npm-run-all -l clean -p build:es build:cjs declarations",
