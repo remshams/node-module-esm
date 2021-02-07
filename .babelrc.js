@@ -1,16 +1,12 @@
-const shared = {
-  ignore: ['src/**/*.spec.ts']
-}
 const sharedPresets = ['@babel/typescript'];
+const shared = {
+  ignore: ['src/**/*.spec.ts'],
+  presets: sharedPresets
+}
 
 module.exports = {
   env: {
-    esmUnbundled: {
-      ...shared,
-      presets: [['@babel/env', {
-        modules: false
-      }], ...sharedPresets],
-    },
+    esmUnbundled: shared,
     esmBundled: {
       ...shared,
       presets: [['@babel/env', {
@@ -19,8 +15,9 @@ module.exports = {
     },
     cjs: {
       ...shared,
-      presets: ['@babel/env', ...sharedPresets],
-      ignore: ['src/**/*.spec.ts']
+      presets: [['@babel/env', {
+        modules: 'commonjs'
+      }], ...sharedPresets],
     },
     test: {
       presets: ['@babel/env', ...sharedPresets]    
