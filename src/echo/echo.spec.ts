@@ -1,4 +1,4 @@
-import { echo } from '../../lib/es/echo/echo';
+import { echo } from '../../lib/esm/echo/echo';
 
 describe('Echo', () => {
   describe('echo', () => {
